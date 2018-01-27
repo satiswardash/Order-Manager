@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/bg_bottom_line_separator">
+
+    <TextView
+        android:id="@+id/sub_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Lorem Ipsum"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/colorBlack"/>
+
+    <ImageButton
+        android:id="@+id/view_sub_category_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_chevron_right_black"
+        android:backgroundTint="@color/colorPrimary" />
+</RelativeLayout>

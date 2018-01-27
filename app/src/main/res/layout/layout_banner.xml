@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:riv_corner_radius="8dp" />
+
+    <TextView
+        android:id="@+id/banner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        tools:text="50% OFF" />
+
+    <TextView
+        android:id="@+id/banner_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/banner_title"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        tools:text="On All Top Men T-Shirts" />
+
+    <Button
+        android:id="@+id/banner_action"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:layout_alignEnd="@+id/banner_description"
+        android:layout_below="@+id/banner_description"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_rectangle"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        tools:text="SHOP NOW" />
+
+</RelativeLayout>

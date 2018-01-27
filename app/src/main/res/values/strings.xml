@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Order Management Demo</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="total_sales_orders">Total Sales Orders</string>
+    <string name="complete_nprocessed">COMPLETE  PROCESSED</string>
+    <string name="partially_nprocessed">PARTIALLY  PROCESSED</string>
+    <string name="not_nprocessed">NOT  PROCESSED</string>
+    <string name="accepted_orders">Accepted Orders</string>
+    <string name="delivered_non_time">DELIVERED  ON TIME</string>
+    <string name="delayed">DELAYED</string>
+    <string name="category">Category</string>
+</resources>
