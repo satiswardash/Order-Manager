@@ -1,5 +1,6 @@
 package com.incture.mobility.oms.data;
 
+import com.incture.mobility.oms.models.Product;
 import com.incture.mobility.oms.models.PromotionBanner;
 
 import java.util.ArrayList;
@@ -111,5 +112,18 @@ public class SampleDataProvider {
         }
 
         return result;
+    }
+
+    public List<Product> getProductsFeed() {
+        List<Product> feeds = new ArrayList<>();
+
+        feeds.add(new Product("p1001", "c101", "cs101", "Apple iPhone 6", "Space Grey, 32GB", "We take great care in designing every aspect of iPhone 6s Plus, including the cases and accessories. Choose a natural leather case in one of ﬁve colours, or go with vibrant silicone in one of 11 colours. And to keep you charged at home, there are now colour‑matched Apple‑designed metal docks.", "", "", "$ 1022.99", "", "10% OFF", "https://firebasestorage.googleapis.com/v0/b/upsc-c98c0.appspot.com/o/AIP632SG_.jpg?alt=media&token=68a31938-8e0f-4f4b-8e6b-9f3815cdc6ff"));
+        feeds.add(new Product("p1002", "c102", "cs101", "Apple iPhone SE", "Rose Gold, 32GB", "We take great care in designing every aspect of iPhone 6s Plus, including the cases and accessories. Choose a natural leather case in one of ﬁve colours, or go with vibrant silicone in one of 11 colours. And to keep you charged at home, there are now colour‑matched Apple‑designed metal docks.", "", "", "$ 876.00", "", "10% OFF", "https://firebasestorage.googleapis.com/v0/b/upsc-c98c0.appspot.com/o/iphonese-800x686.jpg?alt=media&token=3f71a5bb-3ba2-40c6-b1d9-dfd92049af48"));
+        feeds.add(new Product("p1003", "c101", "cs101", "Apple iPhone 7", "Jet Black, 32GB", "We take great care in designing every aspect of iPhone 6s Plus, including the cases and accessories. Choose a natural leather case in one of ﬁve colours, or go with vibrant silicone in one of 11 colours. And to keep you charged at home, there are now colour‑matched Apple‑designed metal docks.", "", "", "$ 673.00", "", "10% OFF", "https://firebasestorage.googleapis.com/v0/b/upsc-c98c0.appspot.com/o/159507.jpg?alt=media&token=7fc50ecc-39a4-42ad-b186-c8591cf2956f"));
+        feeds.add(new Product("p1004", "c102", "cs101", "Apple iPhone 8", " Space Grey, 64GB", "We take great care in designing every aspect of iPhone 6s Plus, including the cases and accessories. Choose a natural leather case in one of ﬁve colours, or go with vibrant silicone in one of 11 colours. And to keep you charged at home, there are now colour‑matched Apple‑designed metal docks.", "", "", "$ 1109.00", "", "10% OFF", "https://firebasestorage.googleapis.com/v0/b/upsc-c98c0.appspot.com/o/iphone_8_plus_detailed_black.jpg?alt=media&token=16a66fb7-479c-4c03-bb0b-872e397f4744"));
+        feeds.add(new Product("p1005", "c103", "cs101", "Apple iPhone X", "Space Grey, 64GB", "We take great care in designing every aspect of iPhone 6s Plus, including the cases and accessories. Choose a natural leather case in one of ﬁve colours, or go with vibrant silicone in one of 11 colours. And to keep you charged at home, there are now colour‑matched Apple‑designed metal docks.", "", "", "$ 1226.00", "", "10% OFF", "https://firebasestorage.googleapis.com/v0/b/upsc-c98c0.appspot.com/o/x_4_141104061847.jpg?alt=media&token=89c479ae-3d1d-4470-ac11-8faf50c902a3"));
+        feeds.add(new Product("p1006", "c101", "cs101", "Apple iPhone 8 Plus", "Space Grey, 64GB", "We take great care in designing every aspect of iPhone 6s Plus, including the cases and accessories. Choose a natural leather case in one of ﬁve colours, or go with vibrant silicone in one of 11 colours. And to keep you charged at home, there are now colour‑matched Apple‑designed metal docks.", "", "", "$ 996.00", "", "10% OFF", "https://firebasestorage.googleapis.com/v0/b/upsc-c98c0.appspot.com/o/apple-iphone-8-plus-64gb-space-grey.jpg?alt=media&token=a410656f-5c51-48be-9005-c82ab59adac2"));
+
+        return  feeds;
     }
 }

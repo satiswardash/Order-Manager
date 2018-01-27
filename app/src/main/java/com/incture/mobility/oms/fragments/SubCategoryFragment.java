@@ -2,6 +2,7 @@ package com.incture.mobility.oms.fragments;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.incture.mobility.oms.MainActivity;
+import com.incture.mobility.oms.ProductListActivity;
 import com.incture.mobility.oms.R;
 import com.incture.mobility.oms.adapters.SubCategoryFeedAdapter;
 import com.incture.mobility.oms.data.SampleDataProvider;
@@ -177,6 +179,8 @@ public class SubCategoryFragment extends Fragment
      */
     @Override
     public void onItemClick(String id) {
-        Toast.makeText(mActivity, id, Toast.LENGTH_SHORT).show();
+        //TODO Pass the categoryId, subCategoryId using Bundle to  the PLP activity to fetch the respective items in it.
+        Intent plpIntent = new Intent(getContext(), ProductListActivity.class);
+        mActivity.startActivity(plpIntent);
     }
 }

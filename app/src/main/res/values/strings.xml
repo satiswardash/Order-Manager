@@ -13,4 +13,5 @@
     <string name="delivered_non_time">DELIVERED  ON TIME</string>
     <string name="delayed">DELAYED</string>
     <string name="category">Category</string>
+    <string name="title_activity_product_list">ProductListActivity</string>
 </resources>
