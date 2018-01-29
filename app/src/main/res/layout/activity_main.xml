@@ -45,7 +45,8 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_shopping_cart_black"
-                    android:backgroundTint="@color/colorWhite" />
+                    android:backgroundTint="@color/colorWhite"
+                    android:onClick="showCart"/>
             </LinearLayout>
 
         </android.support.v7.widget.Toolbar>

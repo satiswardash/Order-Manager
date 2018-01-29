@@ -1,7 +1,6 @@
 package com.incture.mobility.oms.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -10,9 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.incture.mobility.oms.R;
+import com.incture.mobility.oms.data.SampleDataProvider;
+import com.incture.mobility.oms.models.Cart;
 import com.incture.mobility.oms.models.Product;
 import com.squareup.picasso.Picasso;
 
@@ -25,10 +25,6 @@ import me.himanshusoni.quantityview.QuantityView;
  */
 
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ViewHolder> {
-
-    public interface ProductListAdapterListeners {
-        void onItemClicked(Product product);
-    }
 
     private Context mContext;
     private List<Product> mFeeds;
@@ -64,6 +60,10 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         this.mFeeds = mFeeds;
     }
 
+    public interface ProductListAdapterListeners {
+        void onItemClicked(Product product);
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
@@ -86,7 +86,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         }
 
         public void bind(final int position) {
-            Product product = mFeeds.get(position);
+            final Product product = mFeeds.get(position);
+            final Cart cart = new Cart(product.getId(), product, 0, 0f);
 
             title.setText(product.getName());
             description.setText(product.getShortDescription());
@@ -96,10 +97,24 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
                     .placeholder(mContext.getResources().getDrawable(R.drawable.ic_launcher_background))
                     .into(productImage);
 
+            if (SampleDataProvider.cartMap.containsKey(cart.getId())) {
+                quantityView.setQuantity(SampleDataProvider.cartMap.get(cart.getId()).getQuantity());
+            } else {
+                quantityView.setQuantity(0);
+            }
+
             quantityView.setOnQuantityChangeListener(new QuantityView.OnQuantityChangeListener() {
                 @Override
                 public void onQuantityChanged(int oldQuantity, int newQuantity, boolean programmatically) {
-                    //TODO
+
+                    cart.setQuantity(newQuantity);
+                    cart.setTotalPrice(Float.parseFloat(product.getPrice()) * newQuantity);
+                    if (SampleDataProvider.cartMap.containsKey(cart.getId())) {
+                        SampleDataProvider.cartMap.remove(cart.getId());
+                        SampleDataProvider.cartMap.put(cart.getId(), cart);
+                    } else {
+                        SampleDataProvider.cartMap.put(cart.getId(), cart);
+                    }
                 }
 
                 @Override

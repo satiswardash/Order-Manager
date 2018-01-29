@@ -1,9 +1,11 @@
 package com.incture.mobility.oms;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private TextView mProductPrice;
     private TextView mProductDiscount;
     private TextView mProductDetails;
+    private ImageButton cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,14 @@ public class ProductDetailsActivity extends AppCompatActivity {
         mProductPrice = findViewById(R.id.pdp_item_price);
         mProductDiscount = findViewById(R.id.pdp_item_discount);
         mProductDetails = findViewById(R.id.pdp_item_details);
+        cart = findViewById(R.id.pdp_cart_menu_icon);
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CartActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void bindData() {
